@@ -1,0 +1,35 @@
+.container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 15rem);
+  justify-content: center;
+  grid-gap: 1.5rem;
+  grid-auto-rows: auto;
+  /* default */
+  grid-auto-rows: 12rem;
+  grid-auto-rows: minmax(8rem, auto);
+  grid-auto-flow: row dense;
+  /* default */
+  /* grid-auto-flow: column;
+  grid-auto-columns: 5rem; */
+  /* for each new cell a 5rem wide column is added */
+  /* however, columns assigned explicitly in grid-template-columns will still be used. */
+}
+
+.quote:nth-of-type(2) {
+  grid-column: span 2;
+}
+
+.quote {
+  border: 1px solid #fa923f;
+  background: #ffbd87;
+  font-family: sans-serif;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.quote--featured {
+  border: #ff4213;
+  background: #ff9f87;
+  grid-column: span 2;
+}

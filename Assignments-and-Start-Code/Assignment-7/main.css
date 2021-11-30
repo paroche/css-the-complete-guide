@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  grid-template-rows: [header-start] 40px [header-end main-start] 200px [main-end footer-start] 40px [footer-end];
+  grid-template-columns: 100px 320px;
+}
+
+.header {
+  background: red;
+  height: 80%;
+  margin: 4px;
+  grid-row-start: header-start;
+  grid-row-end: header-end;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  text-align: center;
+}
+
+.sidebar {
+  background: green;
+  height: 94%;
+  margin: 6px;
+  grid-row-start: main-start;
+  grid-row-end: main-end;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  text-align: center;
+}
+
+.main {
+  background: blue;
+  height: 94%;
+  margin: 6px;
+  grid-row-start: main-start;
+  grid-row-end: main-end;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+.footer {
+  background: gray;
+  height: 80%;
+  /* height % seems to be based on grid element height */
+  /* margin: 5% 2%; */
+  /* but margin % seems to be based on grid container */
+  margin: 4px;
+  grid-row-start: footer-start;
+  grid-row-end: footer-end;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  text-align: center;
+}

@@ -1,0 +1,9 @@
+// $main-color: #521751;
+$flex-safari-old: -webkit-box;
+$flex-safari-new: -webkit-flex;
+$flex-ms: -ms-flexbox;
+$colors: (main: #521751, secondary: #fa923f);
+$text-alignment: center; // actually, this seems kind of dumb to me, but we were supposed to use $variables...
+$size-default: 1rem;
+$size-tiny: 0.2rem;
+$border-default: $size-tiny / 4 solid map-get($colors, main);

@@ -1,0 +1,52 @@
+#plans {
+  margin-top: 2.2em;
+}
+
+.plan {
+  border: 1px solid green;
+  margin: 1em 0;
+  padding: 2em;
+  width: 82%;
+}
+
+#plus-plan {
+  background: rgb(207, 238, 229);
+}
+
+#free-plan {
+  background: rgb(220, 235, 241);
+}
+
+#premium-plan {
+  background: rgb(69, 107, 86);
+  color: white;
+}
+
+.plan__a {
+  text-decoration: none;
+  color: black;
+}
+
+.plan__h1 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.plan__h2 {
+  font-size: 1.2em;
+  color: #777;
+}
+
+.plan__p {
+  border: 1px solid #000;
+  padding: .7em;
+  background: white;
+}
+
+#premium-plan .plan__h1 {
+  color: white;
+}
+
+#premium-plan .plan__h2 {
+  color: #ddd;
+}

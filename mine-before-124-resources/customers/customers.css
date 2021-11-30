@@ -1,0 +1,82 @@
+.testimonial {
+  font-size: 1.2rem;
+  margin: 48px 0;
+  margin: 3rem 0;
+}
+
+.testimonial__list {
+  width: 80%;
+  margin: auto;
+}
+
+.testimonial:first-of-type {
+  margin-top: 96px;
+  margin-top: 6rem;
+}
+
+.testimonial__image-container {
+  display: inline-block;
+  /* he had us put it in saying couldn't size w/out it, but it's a div element, already block. Might want inline block to keep picture & text inline... */
+  width: 65%;
+  max-width: 580px;
+  vertical-align: middle;
+  /* to match with __info. Don't really get it, though -- image stayed where it was, text moved up */
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+  /* to put a shadow on image, but by itself also has whitespace, adjusted below */
+  /* added 4th param - blur, so see just a touch of shadow on rest of border. */
+}
+
+.testimonial__image {
+  width: 100%;
+  /* notice, won't adjust to size of container until have something like this */
+  vertical-align: top;
+  /* to get rid of white space above box shadow */
+  /* could also use vertical-align: bottom or display: block; */
+  /* he does not really explain this well */
+}
+
+.testimonial__info {
+  text-align: right;
+  padding: 14px;
+  padding: 0.9rem;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%;
+  /* to fit on line w/ image */
+}
+
+#customer-2.testimonial {
+  text-align: right;
+}
+
+#customer-2 .testimonial__info {
+  text-align: left;
+}
+
+.testimonial__name {
+  margin: 3px;
+  margin: 0.2rem;
+  color: #ff5454;
+  font-size: 2rem;
+}
+
+.testimonial__subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.testimonial__subtitle a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.testimonial__subtitle a:hover,
+.testimonial__subtitle a:active {
+  color: #7a7a7a;
+}
+
+.testimonial__text {
+  margin: 3px;
+  margin: 0.2rem;
+}

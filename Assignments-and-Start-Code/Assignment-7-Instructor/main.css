@@ -1,0 +1,47 @@
+/* Instructor Solution */
+
+html {
+  height: 100%;
+  /* w/out this, body height: 100% won't work */
+}
+
+body {
+  display: grid;
+  margin: 20px;
+  height: 100%;
+  /* w/ this, by default elements will divide screen -- default height: auto; I think. */
+  grid-template-columns: [col-1-start] 1fr [col-1-end col-2-start] 3fr [col-2-end];
+  grid-template-rows: 4.5rem auto 4.5rem;
+}
+
+header {
+  background: blue;
+  color: white;
+  grid-column-start: col-1-start;
+  grid-column-end: col-2-end;
+  grid-column-end: -1;
+  /* alternative */
+}
+
+main {
+  background: red;
+  color: white;
+  grid-column-start: col-2-start;
+  /* grid-column-end: col-2-end; */
+  /* grid-column-end: span 1; default */
+}
+
+aside {
+  background: green;
+  color: white;
+  grid-row-start: 2;
+  grid-column-start: col-1-start;
+  grid-column-end: col-1-end;
+}
+
+footer {
+  background: purple;
+  color: white;
+  grid-column-start: col-1-start;
+  grid-column-end: col-2-end;
+}

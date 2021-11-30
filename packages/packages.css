@@ -1,0 +1,167 @@
+  @font-face {
+    font-family: "anonymousPro" format("truetype");
+    src: url("anonymousPro-Regular.ttf");
+    /* font-display: block; */
+    /* for example */
+  }
+  
+  @font-face {
+    font-family: "anonymousPro";
+    src: url("anonymousPro-Bold.ttf") format("truetype");
+    font-weight: 700;
+  }
+  
+  main {
+    padding-top: 2rem;
+  }
+  
+  .background {
+    background: url("../images/plans-background.jpg") center/cover;
+    filter: grayscale(40%);
+    /* width: 100%;
+  height: 100%; */
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+  }
+  
+  .package {
+    width: 80%;
+    margin: 1rem 0;
+    border: 4px solid #0e4f1f;
+    border-left: none;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .package:hover,
+  .package:active {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-color: #ff5454;
+    animation: lift 1s 0.2s 1 ease-out forwards;
+  }
+  
+  .package a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 2rem;
+  }
+  
+  .package__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* margin: 1.2rem; */
+    margin: 0;
+    /* w/out this, will have a top margin. Because is h2, I think */
+    font-size: 12px;
+    font-size: .8rem;
+    color: white;
+    background: #ff5454;
+    padding: 0.5rem;
+    transform: translateX(11rem) rotateZ(45deg);
+    /* will move right first, then rotate */
+    transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+    /* will rotate, then move along x-asis of ROTATED figure -- so diagonally down to right */
+    transform-origin: center;
+    /* is default anyway. Apparently can follow transform and still apply */
+    width: 12rem;
+    text-align: center;
+  }
+  
+  .package__subtitle {
+    color: #979797;
+  }
+  
+  .package__info {
+    padding: 1rem;
+    border: 1px solid #0e4f1f;
+    color: #0e4f1f;
+    background: white;
+    font-size: 1.2rem;
+    /* font: 700 1.2rem "AnonymousPro", sans-serif; */
+    /* font-style font-variant font-weight font-size/line-height font-family */
+  }
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  #plus {
+    background: rgba(213, 255, 220, 0.95);
+  }
+  
+  #free {
+    background: rgba(234, 252, 237, 0.95);
+    float: right;
+    border-right: none;
+    border-left: 4px solid #0e4f1f;
+    text-align: right;
+  }
+  
+  #free:hover,
+  #free:active {
+    border-left-color: #ff5454;
+  }
+  
+  #premium {
+    background: rgba(14, 79, 31, 0.95);
+  }
+  
+  #premium .package__title {
+    color: white;
+  }
+  
+  #premium .package__subtitle {
+    color: #bbb;
+  }
+  
+  @media(min-width: 40rem) {
+    main {
+      /* margin: 3rem auto; */
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 90rem;
+    }
+  }
+  
+  @media(min-width: 90rem) {
+    .package,
+    #free {
+      border: 4px solid #0e4f1f;
+    }
+    #free:hover,
+    #free:active {
+      border: 4px solid #ff5454;
+    }
+  }
+  /* He did the above differently:
+
+      .package {
+        border-left: 4px solid #0e4f1f;
+      }
+
+      #free {
+        border-right: 4px solid #0e4f1f;
+
+      #free:hover,
+      #free:active {
+        border-right-color: #ff5454;
+      }
+
+    I don't see the point. Seems easier and less error-prone to just redefine the whole border.
+  */
+  
+  @keyframes lift {
+    0% {
+      transform: translateY(0rem);
+    }
+    33% {
+      transform: translateY(-1.2rem);
+    }
+    100% {
+      transform: translateY(-1rem);
+    }
+  }

@@ -1,0 +1,15 @@
+{
+    "name": "css-the-complete-guide-2020",
+    "version": "1.0.0",
+    "description": "SASS in CSS - The Complete Guide 2020",
+    "main": "shared.js",
+    "scripts": {
+        "scss:dir": "node-sass --watch ./scss -o ./",
+        "scss": "node-sass --watch ./ -o ./"
+    },
+    "author": "Peter Roche",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^5.0.0"
+    }
+}

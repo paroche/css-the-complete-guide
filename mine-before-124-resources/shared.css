@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+/* ***** Main Header ***** */
+
+.main-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(74, 240, 74);
+  /* my pick off chart */
+  background: #2ddf5c;
+  /* color: #2ddf5c; */
+  padding: 8px 16px;
+  z-index: 1;
+}
+
+.main-header>div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-header__brand {
+  color: #0e4f1f;
+  text-decoration: none;
+  font-weight: bold;
+  /* font-size: 22px; */
+  font-size: 1.375rem;
+  display: inline-block;
+  /* so image will be contained */
+  /* height: 22px; */
+  /* necessary? */
+  height: 1.44rem;
+}
+
+.main-header__brand img {
+  height: 100%;
+}
+
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  width: 80%;
+  /* Fallback if browser (e.g. Safari) doesn't support calc properly */
+  width: calc(100% - 75px);
+  /* display width less brand width. But had to be 53+ rather than 49 because of the way html whitespace is counted w/ inline-block (like between </div> and <nav> here */
+  vertical-align: middle;
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* removes bullet points, if padding 0 didn't */
+  /* don't need to set width: 100% because ul is a block */
+}
+
+.main-nav__item {
+  display: inline-block;
+  /* this is necessary because there are more than 1 <li>s */
+  margin: 0 16px;
+  margin: 0 1rem;
+}
+
+.main-nav__item a {
+  text-decoration: none;
+  /* is assigned to a item, so changing it on parent wouldn't have worked */
+  color: #0e4f1f;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+
+/* .main-nav__item a::after {
+  content: " (Link)";
+  color: red;
+}
+*/
+
+.main-nav__item a:hover {
+  color: white;
+  border-bottom: 5px solid white
+}
+
+.main-nav__item a:active {
+  color: white;
+}
+
+.main-nav__item--cta a {
+  color: white;
+  background: #ff1b68;
+  padding: 8px 16px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+  color: #ff1b68;
+  background: white;
+  border: none;
+}
+
+.main-footer {
+  background: black;
+  padding: 32px;
+  pading: 2rem;
+  margin-top: 48px;
+}
+
+.main-footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-footer__link {
+  display: inline-block;
+  margin: 0 16px;
+  margin: 0 1rem;
+}
+
+.main-footer__link a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+  color: #ccc;
+}
+
+
+/*
+ /* Buttons */
+
+.button {
+  background: #0e4f1f;
+  color: white;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 8px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: white;
+  color: #0e4f1f;
+}
+
+.button:focus {
+  outline: none;
+}
